@@ -1,2 +1,2 @@
-# EL.github.io
+# EL
 Official PyTorch implementation of EL
