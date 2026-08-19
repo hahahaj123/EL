@@ -1,4 +1,4 @@
-name: sida
+name: EL
 channels:
   - pytorch
   - nvidia

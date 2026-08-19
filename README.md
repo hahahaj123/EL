@@ -23,7 +23,7 @@ Use the pinned environment used by the upstream SiD branch:
 
 ```bash
 conda env create -f environment.yaml
-conda activate sida
+conda activate EL
 ```
 
 Training requires a CUDA GPU. Use `python --version`, `python -c "import torch; print(torch.__version__, torch.cuda.is_available())"`, and the CLI checks below before starting a long run.
