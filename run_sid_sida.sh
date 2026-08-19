@@ -25,9 +25,9 @@ if [ "$dataset" = 'cifar10-uncond' ]; then
     --init_sigma 2.5 \
     --batch 256 \
     --batch-gpu 32 \
-    --data '/data/datasets/cifar10-32x32.zip'  \
-    --outdir '/data/image_experiment/sida-train-runs/cifar10-uncond' \
-    --resume '/data/image_experiment/sida-train-runs/cifar10-uncond' \
+    --data './data/datasets/cifar10-32x32.zip'  \
+    --outdir './data/image_experiment/sida-train-runs/cifar10-uncond' \
+    --resume './data/image_experiment/sida-train-runs/cifar10-uncond' \
     --nosubdir 0 \
     --arch ddpmpp \
     --edm_model cifar10-uncond \
