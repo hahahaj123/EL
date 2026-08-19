@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>敬请期待 | Coming Soon</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            margin: 0;
+            background-color: #f4f4f4;
+            text-align: center;
+            padding: 20px;
+        }
+        .container {
+            background: white;
+            padding: 40px;
+            border-radius: 10px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+            max-width: 600px;
+        }
+        h1 {
+            color: #333;
+            margin-bottom: 20px;
+        }
+        p {
+            color: #666;
+            line-height: 1.6;
+            margin-bottom: 30px;
+        }
+        .countdown {
+            font-size: 1.5em;
+            font-weight: bold;
+            color: #2c3e50;
+            margin: 20px 0;
+        }
+        .contact {
+            font-style: italic;
+            color: #7f8c8d;
+            margin-top: 30px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>精彩即将呈现</h1>
+        <p>我们的网站正在紧锣密鼓地建设中，将为您带来全新的体验。感谢您的耐心等待！</p>
+        <div class="countdown" id="countdown">即将上线...</div>
+        <p>如果您对我们的项目感兴趣，请保存此链接，稍后再回来看看。</p>
+        <p class="contact">联系邮箱：your-email@example.com</p>
+    </div>
+
+    <script>
+        // 这是一个简单的倒计时示例，你可以设定一个具体的上线日期
+        function updateCountdown() {
+            const targetDate = new Date('2026-01-01T00:00:00').getTime(); // 修改为你的目标日期
+            const now = new Date().getTime();
+            const distance = targetDate - now;
+
+            if (distance > 0) {
+                const days = Math.floor(distance / (1000 * 60 * 60 * 24));
+                const hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+                document.getElementById('countdown').innerHTML = `距离上线还有：${days}天 ${hours}小时`;
+            } else {
+                document.getElementById('countdown').innerHTML = "网站已上线！";
+            }
+        }
+        // 初次调用并设置每秒更新一次
+        updateCountdown();
+        setInterval(updateCountdown, 1000 * 60 * 60); // 每小时更新一次，可调整为每秒更新
+    </script>
+</body>
+</html>
